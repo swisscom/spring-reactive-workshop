@@ -20,7 +20,7 @@ public class OrchestratorService {
     public Mono<User> getUserWithPetsForId(int userId) {
         return userService
             .getUserById(userId)
-            .zipWith(getPetsForUserId(userId))
+            .???
             .map(tuple -> setPetListForUser(tuple.getT1(), tuple.getT2()));
     }
 

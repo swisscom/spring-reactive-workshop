@@ -1,6 +1,5 @@
 package com.swisscom.clouds.workshop.users.controllers;
 
-import com.swisscom.clouds.workshop.users.exceptions.UserNotFoundException;
 import com.swisscom.clouds.workshop.users.repositories.entities.User;
 import com.swisscom.clouds.workshop.users.services.UserService;
 
@@ -27,9 +26,6 @@ public class UserController {
 
         return userService
                     .getUserById(userId)
-                    .switchIfEmpty(Mono.defer(() -> {
-                        throw new UserNotFoundException(userId);
-                    }))
-                   .log(getClass().getName());
+                    .log(getClass().getName());
     }
 }

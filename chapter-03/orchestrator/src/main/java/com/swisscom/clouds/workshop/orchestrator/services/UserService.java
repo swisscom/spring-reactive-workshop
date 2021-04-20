@@ -26,9 +26,7 @@ public class UserService {
     }
 
     public Mono<User> getUserById(int userId) {
-        return Flux.fromIterable(orchestratorProperties.getUserServicePorts())
-                .flatMap(baseUrl -> queryBackend(baseUrl, userId))
-                .next();
+        return Flux.fromIterable(orchestratorProperties.getUserServicePorts());
     }
 
     private Mono<User> queryBackend(int port, int userId) {

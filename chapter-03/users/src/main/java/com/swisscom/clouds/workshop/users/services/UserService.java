@@ -32,7 +32,6 @@ public class UserService {
         int latency = chaosService.getLatency();
 
         return userRepository.findById(userId)
-            .map(user -> setInstanceIdAndLatency(user, latency))
             .delayElement(Duration.ofMillis(latency));
     }
 
