@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="User-Service 0" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="users.main" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.swisscom.clouds.workshop.users.UsersApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <envs>
+      <env name="SERVER_PORT" value="8080" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

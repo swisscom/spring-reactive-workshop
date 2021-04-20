@@ -1,0 +1,20 @@
+server:
+  port: 8090
+
+
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem:///DBNAME?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.H2Dialect
+
+chaos:
+  exception-probability: 0.2

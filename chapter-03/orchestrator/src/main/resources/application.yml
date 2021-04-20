@@ -1,0 +1,15 @@
+server:
+  port: 8095
+
+orchestrator:
+  user-service-url: "http://localhost"
+  user-service-ports:
+    - 8080
+    - 8081
+    - 8082
+    - 8083
+  user-service-path: "/api/users/{uid}"
+  pet-service-url: "http://localhost:8090"
+  pet-service-path: "/api/users/{uid}/pets"
+  pet-service-retries: 5
+  pet-service-backoff-duration: 100
