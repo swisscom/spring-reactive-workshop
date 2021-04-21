@@ -16,5 +16,6 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
 
 chaos:
+  exception-probability: 0.2
   min-latency: 1000
   max-latency: 2000
