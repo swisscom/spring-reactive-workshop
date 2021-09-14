@@ -1,4 +1,4 @@
-§# Cloud Native Workshop - Unblock your applications
+# Cloud Native Workshop - Unblock your applications
 
 ## Chapter 3 - Finalize our microservice setup
 
